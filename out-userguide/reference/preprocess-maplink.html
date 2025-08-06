@@ -1,0 +1,16 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="This step collects links based on a map and moves those links into the referenced topics. The links are created based on hierarchy in the DITA map, the collection-type attribute, and relationship tables. This step is implemented in XSLT and Java."><title>Map-based linking (maplink)</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="preprocess-maplink"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Map-based linking (<code class="ph codeph">maplink</code>)</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">This step collects links based on a map and moves those links into the referenced topics. The links are
+    created based on hierarchy in the DITA map, the <code class="keyword markupname xmlatt">@collection-type</code> attribute, and relationship tables.
+    This step is implemented in XSLT and Java.</p>
+    <section class="section">
+      <p class="p">The <code class="ph codeph">maplink</code> module runs an XSLT stylesheet that evaluates the map; it places all the generated
+        links into a single file in memory. The module then runs a Java program that pushes the generated links into the
+        applicable topics.</p>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="preprocessing.html" title="The pre-processing operation is a set of steps that typically runs at the beginning of every DITA-OT transformation. Each step or stage corresponds to an Ant target in the build pipeline; the preprocess target calls the entire set of steps.">Pre-processing modules</a></div><div class="previouslink"><strong>Previous topic:</strong> <a class="link" href="preprocess-metadata.html" title="The move-meta-entries step pushes metadata back and forth between maps and topics. For example, index entries and copyrights in the map are pushed into affected topics, so that the topics can be processed later in isolation while retaining all relevant metadata. This step is implemented in Java.">Move metadata (move-meta-entries) and pull content into maps (mappull)</a></div><div class="nextlink"><strong>Next topic:</strong> <a class="link" href="preprocess-topicpull.html" title="The topicpull step pulls content into xref and link elements. This step is implemented in XSLT.">Pull content into topics (topicpull)</a></div></div></nav></article></main></body></html>

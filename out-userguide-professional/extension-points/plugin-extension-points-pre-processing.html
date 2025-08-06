@@ -1,0 +1,127 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="You can use these extension points to run an Ant target before or after the pre-processing stage. If necessary, you can also run an Ant target before a specific pre-processing step — but this approach is not recommended."><title>Pre-processing extension points</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="plugin-extension-points-pre-processing"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Pre-processing extension points</h1>
+  
+  <div class="body refbody"><p class="shortdesc">You can use these extension points to run an Ant target before or after the pre-processing stage. If
+    necessary, you can also run an Ant target before a specific pre-processing step — but this approach is not
+    recommended.</p>
+    <section class="section">
+      <div class="note tip note_tip"><span class="note__title">Tip:</span> <div class="note__body">For maximum compatibility with future versions of
+            DITA-OT, most plug-ins should use the extension points that run <strong class="ph b">before</strong> or <strong class="ph b">after</strong>
+            pre-processing.</div></div>
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.pre</span></dt>
+          <dd class="dd">Runs an Ant
+            target before the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.post</span></dt>
+          <dd class="dd">Runs an Ant
+            target after the pre-processing stage.</dd>
+        
+      </dl>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Legacy pre-processing extensions</h2>
+      
+      <p class="p">The following extension points are available in the original <code class="ph codeph">preprocess</code> pipeline that was used
+        by default for all transformations prior to DITA-OT 3.0. These extensions are not available in the newer
+        <a class="xref" href="../reference/map-first-preprocessing.html" title="DITA-OT provides a map-first pre-processing option as an alternative to the default preprocess operation. The method, which was introduced in DITA-OT 2.5 as an experimental feature, has since been improved and is ready for use in production scenarios. Map-first pre-processing provides the same functionality as the default preprocess, but takes a different approach.">map-first pre-processing</a> pipeline (<code class="ph codeph">preprocess2</code>), which
+        is used in the PDF and HTML Help transformations as of DITA-OT 3.0.</p>
+      <div class="note caution note_caution"><span class="note__title">CAUTION:</span> <div class="note__body">The internal order of pre-processing steps is
+            subject to change between versions of DITA-OT. New versions may remove, reorder, combine, or add steps to
+            the process, so the extension points <strong class="ph b">within</strong> the pre-processing stage should only be used if
+            absolutely necessary.</div></div>
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.chunk.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">chunk</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.coderef.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">coderef</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.conref.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">conref</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.conrefpush.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">conrefpush</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.clean-temp.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">clean-temp</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.copy-files.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">copy-files</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.copy-flag.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">copy-flag</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.copy-html.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">copy-html</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.copy-image.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">copy-image</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.copy-subsidiary.pre</span></dt>
+          <dd class="dd">Runs an Ant target before the <code class="ph codeph">copy-subsidiary</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.debug-filter.pre</span></dt>
+          <dd class="dd">Runs an Ant target before the <code class="ph codeph">debug-filter</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.gen-list.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">gen-list</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.keyref.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">keyref</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.maplink.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">maplink</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.mappull.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">mappull</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.mapref.pre</span></dt>
+          <dd class="dd">Runs an
+            Ant target before the <code class="ph codeph">mapref</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.move-meta-entries.pre</span></dt>
+          <dd class="dd">Runs an Ant target before the <code class="ph codeph">move-meta-entries</code> step in the pre-processing stage.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">depend.preprocess.topicpull.pre</span></dt>
+          <dd class="dd">Runs
+            an Ant target before the <code class="ph codeph">topicpull</code> step in the pre-processing stage.</dd>
+        
+      </dl>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-extension-points.html" title="DITA Open Toolkit provides a series of extension points that can be used to integrate changes into the core code. Extension points are defined in the plugin.xml file for each plug-in. When plug-ins are installed, DITA-OT makes each extension visible to the rest of the toolkit.">Extension point reference</a></div></div></nav></article></main></body></html>

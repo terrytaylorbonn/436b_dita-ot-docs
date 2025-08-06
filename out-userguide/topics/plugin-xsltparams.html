@@ -1,0 +1,55 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="You can pass parameters from the Ant build to existing XSLT steps in both the pre-processing pipeline and certain DITA-OT transformations. This can be useful if you want to make the parameters available as global xsl:param values within XSLT overrides."><title>Adding parameters to existing XSLT steps</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="plugin-xsltparams"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Adding parameters to existing XSLT steps</h1>
+  
+  
+  
+  <div class="body taskbody"><p class="shortdesc">You can pass parameters from the Ant build to existing XSLT steps in both the pre-processing pipeline and
+    certain DITA-OT transformations. This can be useful if you want to make the parameters available as global
+      <code class="keyword markupname xmlelement">&lt;xsl:param&gt;</code> values within XSLT overrides.</p>
+    <section><ol class="ol steps"><li class="li step stepexpand" id="plugin-xsltparams__create-xml-file">
+        <span class="ph cmd">Create an XML file that contains one or more Ant <code class="keyword markupname xmlelement">&lt;param&gt;</code> elements nested within a
+            <code class="keyword markupname xmlelement">&lt;dummy&gt;</code> wrapper element.</span>
+        <div class="itemgroup stepxmp">
+          <pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;dummy&gt;
+  <em class="ph i">&lt;!-- Any Ant code allowed in xslt task is possible. Example: --&gt;</em>
+  &lt;param name="paramNameinXSLT" expression="${antProperty}" 
+         if="antProperty"/&gt;
+&lt;/dummy&gt;</code></pre>
+        </div>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Construct a <span class="ph filepath">plugin.xml</span> file that contains the following content:</span>
+        <div class="itemgroup info"><pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;plugin id="<var class="keyword varname">plugin-id</var>"&gt;
+  &lt;feature extension="<var class="keyword varname">extension-point</var>" file="<var class="keyword varname">file</var>"/&gt;
+&lt;/plugin&gt;</code></pre>where:
+          <ul class="ul">
+            <li class="li"><var class="keyword varname">plugin-id</var> is the plug-in identifier, for example,
+                <code class="ph codeph">com.example.newparam</code>.</li>
+            <li class="li"><var class="keyword varname">extension-point</var> is the DITA-OT extension point, for example,<code class="ph codeph">
+                dita.conductor.xhtml.param</code>. This indicates the DITA-OT processing step where the parameters
+              will be available.</li>
+            <li class="li"><var class="keyword varname">file</var> is the name of the XML file that you created in step
+              <a class="xref" href="plugin-xsltparams.html#plugin-xsltparams__create-xml-file">1</a>, for example, <span class="ph filepath">insertParameters.xml</span>.
+            </li>
+          </ul></div>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Use the <span class="keyword cmdname">dita install</span> subcommand to install the plug-in.</span>
+        <div class="itemgroup info">
+          <div class="note note note_note"><span class="note__title">Note:</span> <div class="note__body">For more information, see
+            <a class="xref" href="plugins-installing.html" title="Use the dita install subcommand to install plug-ins.">Installing plug-ins</a>.</div></div></div>
+      </li></ol></section>
+    <section class="section result">The <span class="ph filepath">plugin.xml</span> file passes the parameters to the specified transformation or
+      pre-processing module.</section>
+    <section class="example"><h2 class="title sectiontitle">Example</h2>
+      
+      <p class="p">The following plug-in passes the parameters defined in the <span class="ph filepath">insertParameters.xml</span> file as
+        input to the XHTML process. Generally, an additional XSLT override will make use of the parameters to do
+        something new with the generated content.</p>
+      <pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;plugin id="com.example.newparam"&gt;
+  &lt;feature extension="dita.conductor.xhtml.param" 
+           file="insertParameters.xml"/&gt;
+&lt;/plugin&gt;</code></pre>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-use-cases.html" title="Plug-ins allow you to extend the functionality of DITA-OT. This might entail adding support for specialized document types, integrating processing overrides, or defining new output transformations.">Plug-in use cases</a></div></div><div class="linklist reltasks"><strong>Related tasks</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="plugins-installing.html" title="Use the dita install subcommand to install plug-ins.">Installing plug-ins</a></li></ul></div><div class="linklist relref"><strong>Related reference</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="../extension-points/plugin-extension-points-xslt-parameters.html" title="You can use these extension points to pass parameters into existing XSLT steps in both the pre-processing pipeline and DITA-OT transformation. The parameters generally will be available as global xsl:param values with XSLT overrides.">XSLT-parameter extension points</a></li></ul></div></nav></article></main></body></html>

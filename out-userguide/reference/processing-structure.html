@@ -1,0 +1,25 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="DITA-OT implements a multi-stage, map-driven architecture to process DITA content. Each stage in the process examines some or all of the content; some stages result in temporary files that are used by later steps, while others stages result in updated copies of the DITA content. Most of the processing takes place in a temporary working directory; the source files themselves are never modified."><title>Processing structure</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="processing-structure"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Processing structure</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">DITA-OT implements a multi-stage, map-driven architecture to process DITA content. Each stage in the
+    process examines some or all of the content; some stages result in temporary files that are used by later steps,
+    while others stages result in updated copies of the DITA content. Most of the processing takes place in a temporary
+    working directory; the source files themselves are never modified.</p>
+    <p class="p">DITA-OT is designed as a pipeline. Most of the pipeline is common to all output formats; it is known as the
+        <dfn class="term">pre-processing stage</dfn>. In general, any DITA process begins with this common set of pre-processing
+      routines.</p>
+    <p class="p">Once the pre-processing is completed, the pipeline diverges based on the requested output format. Some processing
+      is still common to multiple output formats; for example, Eclipse Help and HTML Help both use the same routines to
+      generate XHTML topics, after which the two pipelines branch to create different sets of navigation files.</p>
+    <p class="p">The following image illustrates how the pipeline works for several common output formats: PDF, Eclipse Help, HTML
+      Help, XHTML, and HTML5.</p>
+    <div class="note note note_note"><span class="note__title">Note:</span> <div class="note__body">Other output formats may implement additional processing steps.</div></div>
+    <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Diagram of some possible paths through the transformation pipeline</figcaption>
+      
+      <br><img class="image" src="images/processing-flow.svg" width="624"><br>
+    </figure>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="architecture.html" title="DITA Open Toolkit is an open-source implementation of the OASIS specification for the Darwin Information Typing Architecture. The toolkit uses Ant, XSLT, and Java to transform DITA content (maps and topics) into different deliverable formats.">DITA Open Toolkit Architecture</a></div></div></nav></article></main></body></html>

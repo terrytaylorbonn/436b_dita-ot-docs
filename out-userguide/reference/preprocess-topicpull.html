@@ -1,0 +1,22 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="The topicpull step pulls content into xref and link elements. This step is implemented in XSLT."><title>Pull content into topics (topicpull)</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="preprocess-topicpull"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Pull content into topics (<code class="ph codeph">topicpull</code>)</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">The <code class="ph codeph">topicpull</code> step pulls content into <code class="keyword markupname xmlelement">&lt;xref&gt;</code> and
+      <code class="keyword markupname xmlelement">&lt;link&gt;</code> elements. This step is implemented in XSLT.</p>
+    <section class="section">
+      <p class="p">If an <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element does not contain link text, the target is examined and the link
+        text is pulled. For example, a reference to a topic pulls the title of the topic; a reference to a list item
+        pulls the number of the item. If the <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element references a topic that has a short
+        description, and the <code class="keyword markupname xmlelement">&lt;xref&gt;</code> element does not already contain a child
+          <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element, a <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element is created that contains the
+        text from the topic short description.</p>
+      <p class="p">The process is similar for <code class="keyword markupname xmlelement">&lt;link&gt;</code> elements. If the <code class="keyword markupname xmlelement">&lt;link&gt;</code> element
+        does not have a child <code class="keyword markupname xmlelement">&lt;linktext&gt;</code> element, one is created with the appropriate link text.
+        Similarly, if the <code class="keyword markupname xmlelement">&lt;link&gt;</code> element does not have a child <code class="keyword markupname xmlelement">&lt;desc&gt;</code>
+        element, and the short description of the target can be determined, a <code class="keyword markupname xmlelement">&lt;desc&gt;</code> element is
+        created that contains the text from the topic short description.</p></section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="preprocessing.html" title="The pre-processing operation is a set of steps that typically runs at the beginning of every DITA-OT transformation. Each step or stage corresponds to an Ant target in the build pipeline; the preprocess target calls the entire set of steps.">Pre-processing modules</a></div><div class="previouslink"><strong>Previous topic:</strong> <a class="link" href="preprocess-maplink.html" title="This step collects links based on a map and moves those links into the referenced topics. The links are created based on hierarchy in the DITA map, the collection-type attribute, and relationship tables. This step is implemented in XSLT and Java.">Map-based linking (maplink)</a></div><div class="nextlink"><strong>Next topic:</strong> <a class="link" href="preprocess-flagging.html" title="Beginning with DITA-OT 1.7, flagging support is implemented as a common flag-module pre-processing step. The module evaluates the DITAVAL against all flagging attributes, and adds DITA-OT–specific hints to the topic when flags are active. Any extended transformation type may use these hints to support flagging without adding logic to interpret the DITAVAL.">Flagging (flag-module)</a></div></div></nav></article></main></body></html>

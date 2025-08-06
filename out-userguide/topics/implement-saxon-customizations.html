@@ -1,0 +1,41 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Plug-ins can contribute XSLT extension functions and collation URI resolvers. These customizations are automatically configured to work with Saxon when transformations are run using the DITA-OT pipeline task with custom XSLT."><title>Adding Saxon customizations</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="implement-saxon-customizations"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Adding Saxon customizations</h1>
+  
+  
+  
+  <div class="body"><p class="shortdesc">Plug-ins can contribute XSLT extension functions and collation URI resolvers. These customizations are
+    automatically configured to work with Saxon when transformations are run using the DITA-OT
+      <code class="keyword markupname xmlelement">&lt;pipeline&gt;</code> task with custom XSLT.</p>
+    <div class="p">Plug-ins can provide the following Saxon extensions:
+      <ul class="ul">
+        <li class="li">Extension functions</li>
+        <li class="li">Collation URI resolvers</li>
+      </ul></div>
+    <p class="p">Extensions are declared in plug-in-provided JAR files using the Java ServiceLoader feature that looks for
+      service-declaring files in JAR files and loads classes. This requires adding one or more files in the
+        <span class="ph filepath">META-INF/services</span> directory in plug-in-provided JAR files.</p>
+    <p class="p">You can create the file manually or generate it dynamically using <code class="keyword markupname xmlelement">&lt;service&gt;</code> elements in
+      Ant <code class="keyword markupname xmlelement">&lt;jar&gt;</code> tasks. See the topics for the different extension types for details.</p>
+    <div class="p">These extensions use the DITA Open Toolkit Ant <code class="keyword markupname xmlelement">&lt;pipeline&gt;</code> element to wrap
+        <code class="keyword markupname xmlelement">&lt;xslt&gt;</code> elements. You can do this in plug-ins as shown in this excerpt from the DITA
+      Community I18N plugin’s <span class="ph filepath">build.xml</span>
+      file:<pre class="pre codeblock language-xml"><code>&lt;target name="org.dita-community.i18n-saxon-extension-test"&gt;
+  &lt;pipeline message="Test the DITA Community i18n Saxon extension functions"
+            taskname="i18n-extension-function-test"&gt;
+    &lt;xslt
+      in="${dita.plugin.org.dita-community.i18n.dir}/test/xsl/data/test-data.xml"
+      style="${dita.plugin.org.dita-community.i18n.dir}/test/xsl/test-extension-functions.xsl"
+      out="${basedir}/out/extension-function-test-results.xml"
+      &gt;
+    &lt;/xslt&gt;
+  &lt;/pipeline&gt;
+&lt;/target&gt;</code></pre></div>
+    <p class="p">Normal XSLT extensions to built-in transformation types will automatically have the extensions available to
+      them.</p>
+    <p class="p">The dynamic Saxon configuration is implemented in the class <code class="ph codeph">org.dita.dost.module.XsltModule</code>,
+      which backs the <code class="keyword markupname xmlelement">&lt;pipeline&gt;</code>/<code class="keyword markupname xmlelement">&lt;xslt&gt;</code> element.</p>
+    <p class="p"> </p>
+  </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="implement-saxon-extension-functions.html">Implementing Saxon extension functions</a></strong><br>Plug-ins can contribute Saxon extension functions for use in XSLT transformations run by DITA Open     Toolkit.</li><li class="link ulchildlink"><strong><a href="implement-saxon-collation-uri-resolvers.html">Implementing custom Saxon collation URI resolvers</a></strong><br>Plug-ins can provide custom URI resolvers that provide collators for specific collation URIs.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-use-cases.html" title="Plug-ins allow you to extend the functionality of DITA-OT. This might entail adding support for specialized document types, integrating processing overrides, or defining new output transformations.">Plug-in use cases</a></div></div></nav></article></main></body></html>
