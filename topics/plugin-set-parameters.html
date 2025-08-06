@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="To ensure that output is always generated with the same settings, you can create a plug-in to define a new output format that automatically sets certain DITA-OT parameters."><title>Setting parameters with plug-ins</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="ID"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Setting parameters with plug-ins</h1>
+  
+  
+  
+  <div class="body conbody"><p class="shortdesc">To ensure that output is always generated with the same settings, you can create a plug-in to define a new
+    output format that automatically sets certain DITA-OT parameters.</p>
+    <p class="p">You might want to build a transformation type that ensures that certain DITA-OT parameters are used. For example,
+      consider the following scenario.</p>
+    <section class="section" id="ID__use-case-draft-pdfs"><h2 class="title sectiontitle">Draft PDFs</h2>
+      
+      <p class="p">You want to ensure that PDFs generated for internal review have the following characteristics:</p>
+      <ul class="ul">
+        <li class="li">
+          <p class="p">Use company style sheets</p>
+        </li>
+        <li class="li">
+          <p class="p">Make draft comments visible to the reviewers, as they contain queries from the information developers</p>
+        </li>
+        <li class="li">
+          <p class="p">Print the file names of the graphics underneath figures, so that graphic artists can more quickly respond
+            to requested changes</p>
+        </li>
+      </ul>
+      <p class="p">To accomplish this, you can create a new plug-in. In the Ant script that defines the transformation type,
+        specify the DITA-OT parameters. For example, to render draft comments and art labels, add
+          <code class="keyword markupname xmlelement">&lt;property&gt;</code> elements to specify the DITA-OT parameters:</p>
+      <div class="p">
+        <pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;project name="com.example.draft.pdf"&gt;
+  &lt;target name="dita2draft.pdf.init"&gt;
+    &lt;property name="customization.dir"
+              location="${dita.plugin.com.example.draft.pdf.dir}/cfg"/&gt;
+    <strong class="ph b">&lt;property name="args.draft" value="yes"/&gt;</strong>
+    <strong class="ph b">&lt;property name="args.artlbl" value="yes"/&gt;</strong>
+  &lt;/target&gt;
+  &lt;target name="dita2draft.pdf"
+          depends="dita2draft.pdf.init, dita2production.pdf, dita2pdf2"/&gt;
+&lt;/project&gt;</code></pre>
+      </div>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-use-cases.html" title="Plug-ins allow you to extend the functionality of DITA-OT. This might entail adding support for specialized document types, integrating processing overrides, or defining new output transformations.">Plug-in use cases</a></div></div></nav></article></main></body></html>

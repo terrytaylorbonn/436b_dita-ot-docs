@@ -1,0 +1,38 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Certain commands, for example, the dita install command, use a network connection to install plug-ins from the configured registry or process remote referenced resources. In environments where an HTTP proxy is used to establish a network connection, you can provide the proxy configuration via the ANT_OPTS environment variable."><title>Configuring proxies</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="configuring-proxies"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Configuring proxies</h1>
+  
+  
+  <div class="body taskbody"><p class="shortdesc">Certain commands, for example, the <span class="keyword cmdname">dita install</span> command, use a network connection to
+    install plug-ins from the configured registry or process remote referenced resources. In environments where an HTTP
+    proxy is used to establish a network connection, you can provide the proxy configuration via the
+      <code class="ph codeph">ANT_OPTS</code> environment variable. </p>
+    <section><ul class="ul steps-unordered"><li class="li step">
+        <span class="ph cmd">To configure the proxy for a specific session, from the command prompt, issue the
+          following command:</span>
+        <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder multi-platform"><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead><tr class="sthead chhead"><th scope="col" class="stentry choptionhd" style="vertical-align:bottom;text-align:left;">Platform</th><th scope="col" class="stentry chdeschd" style="vertical-align:bottom;text-align:left;">Command</th></tr></thead><tbody><tr class="strow chrow">
+            <th style="vertical-align:top;" scope="row" class="stentry choption">Linux or macOS&nbsp;</th>
+            <td style="vertical-align:top;" class="stentry chdesc"><pre class="pre codeblock syntax-bash multi-platform"><code>export ANT_OPTS="-Dhttp.proxySet=true \
+                 -Dhttps.proxyHost=<var class="keyword varname">&lt;HTTPS proxy IP address&gt;</var> \
+                 -Dhttp.proxyHost=<var class="keyword varname">&lt;HTTP proxy IP address&gt;</var> \
+                 -Dhttp.proxyPort=<var class="keyword varname">&lt;HTTP proxy port&gt;</var> \
+                 -Dhttps.proxyPort=<var class="keyword varname">&lt;HTTPS proxy port&gt;</var>"</code></pre></td>
+          </tr><tr class="strow chrow">
+            <th style="vertical-align:top;" scope="row" class="stentry choption">Windows</th>
+            <td style="vertical-align:top;" class="stentry chdesc"><pre class="pre codeblock syntax-bash multi-platform"><code>set ANT_OPTS=%ANT_OPTS% -Dhttp.proxySet=true ^
+                        -Dhttps.proxyHost=<var class="keyword varname">&lt;HTTPS proxy IP address&gt;</var> ^
+                        -Dhttp.proxyHost=<var class="keyword varname">&lt;HTTP proxy IP address&gt;</var> ^
+                        -Dhttp.proxyPort=<var class="keyword varname">&lt;HTTP proxy port&gt;</var> ^
+                        -Dhttps.proxyPort=<var class="keyword varname">&lt;HTTPS proxy port&gt;</var></code></pre></td>
+          </tr></tbody></table>
+      </li><li class="li step">
+        <span class="ph cmd">To persistently change the value, change the value allocated to the
+            <code class="ph codeph">ANT_OPTS</code> environment variable on your system.</span>
+      </li></ul></section>
+    <section class="section postreq">If a command has previously failed due to a connection timeout, issue the command
+      again. For
+      example:<pre class="pre codeblock"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">install</span> <var class="keyword varname">&lt;plug-in&gt;</var></code></pre></section>
+    
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="troubleshooting-overview.html" title="This part contains information about problems that you might encounter and how to resolve them.">Error messages and troubleshooting</a></div></div></nav></article></main></body></html>

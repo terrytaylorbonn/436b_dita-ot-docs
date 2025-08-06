@@ -1,0 +1,11 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="A theme can extend another theme using the extends key."><title>Extending themes</title><link rel="stylesheet" type="text/css" href="../../css/dita-ot-doc.css"></head><body id="extending-themes"><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Extending themes</h1><div class="body"><p class="shortdesc">A theme can extend another theme using the <code class="ph codeph">extends</code> key.</p><p class="p">If the value is <code class="ph codeph">default</code>, it resolves to the built-in default theme. Otherwise the value of <code class="ph codeph">extends</code> is a relative path from the current theme file to the theme being extended. If a theme doesn't have an <code class="ph codeph">extends</code> key, default PDF2 plug-in styles are used.</p><p class="p"><code class="ph codeph">base.yaml</code></p><pre class="pre codeblock language-yaml"><code>brand:
+  primary-color: orange
+page:
+  size: A4</code></pre><p class="p"><code class="ph codeph">product/theme.yaml</code></p><pre class="pre codeblock language-yaml"><code>extends: ../base.yaml
+page:
+  size: Letter
+style:
+  topic:
+    color: $brand-primary-color</code></pre></div><nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../topics/pdf-themes.html" title="DITA-OT 4.0 includes the com.elovirta.pdf plug-in, which extends the default PDF2 plug-in with a new theme parameter. The --theme option takes a path to a theme file and changes the styling of the PDF output without requiring changes to XSLT stylesheets.">PDF themes</a></div></div></nav></article></main></body></html>

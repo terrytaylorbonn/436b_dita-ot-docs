@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="custom-topic">
+  <title>My Custom DITA-OT Topic</title>
+  <shortdesc>This is a custom topic I added to demonstrate how easy it is to extend the documentation.</shortdesc>
+  <conbody>
+    <p>This page was added by modifying the DITA source files. Here's what I can include:</p>
+    <ul>
+      <li>Step-by-step procedures</li>
+      <li>Code examples</li>
+      <li>Cross-references to other topics</li>
+      <li>Tables, images, and other content</li>
+    </ul>
+    
+    <section>
+      <title>Code Example</title>
+      <codeblock outputclass="language-bash">
+# Example DITA-OT command
+dita --input=my-map.ditamap --format=html5 --output=my-output
+      </codeblock>
+    </section>
+    
+    <section>
+      <title>Related Information</title>
+      <p>See also: <xref href="installing.dita">Installing DITA-OT</xref></p>
+    </section>
+  </conbody>
+</concept>

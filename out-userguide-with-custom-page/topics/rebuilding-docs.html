@@ -1,0 +1,39 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="When you add or remove plug-ins, you can rebuild the documentation to update the information on the extension points, messages, and parameters that are available in your environment."><title>Rebuilding the DITA-OT documentation</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="rebuilding-docs"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Rebuilding the DITA-OT documentation</h1>
+  
+  
+  
+  <div class="body taskbody"><p class="shortdesc">When you add or remove plug-ins, you can rebuild the documentation to update the information on the
+    extension points, messages, and parameters that are available in your environment.</p>
+    <section class="section context">
+      <p class="p">DITA-OT ships with a <a href="https://gradle.org" target="_blank" rel="external noopener"><span class="keyword">Gradle</span></a> build script that enables you to rebuild the toolkit
+        documentation. The build script reads the toolkit’s plug-in configuration and automatically regenerates topics
+        and properties file templates based on the extension points, messages, and parameters provided by the installed
+        plug-ins.</p>
+      <div class="note attention note_attention"><span class="note__title">Attention:</span> <div class="note__body">If you have installed new plug-ins, you may need to add the corresponding generated topics
+        to the DITA maps to include the new information in the output.</div></div></section>
+    <section><ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">Change to the <span class="ph filepath">docsrc/</span> subdirectory of the DITA-OT installation.</span>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Run one of the following commands.</span>
+        <ul class="ul choices">
+          <li class="li choice">On Linux and macOS:
+            <pre class="pre codeblock"><code>./gradlew <var class="keyword varname">target</var></code></pre></li>
+          <li class="li choice">On Windows: <pre class="pre codeblock"><code>gradlew.bat <var class="keyword varname">target</var></code></pre></li>
+        </ul>
+        <div class="itemgroup info">
+          <div class="p">The <var class="keyword varname">target</var> parameter is optional and specifies a transformation type. It takes the
+            following values:
+            <ul class="ul">
+              <li class="li"><span class="keyword option">html</span></li>
+              <li class="li"><span class="keyword option">htmlhelp</span></li>
+              <li class="li"><span class="keyword option">pdf</span></li>
+            </ul>
+          </div>
+          <p class="p">If you do not specify a target, HTML5 and PDF output is generated.</p>
+        </div>
+      </li></ol></section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="extending.html" title="You can extend DITA Open Toolkit with plug-ins that change the default transformations, add new output formats, or implement DITA specializations. A variety of open source plug-ins are available from the plug-in registry at dita-ot.org/plugins.">Extending DITA-OT with plug-ins</a></div></div></nav></article></main></body></html>

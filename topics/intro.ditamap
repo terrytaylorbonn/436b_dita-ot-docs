@@ -13,5 +13,27 @@
   <topicref keyref="output-formats" linking="normal">
     <mapref href="transformations.ditamap"/>
   </topicref>
+  <topicref href="my-custom-topic.dita" linking="normal"/>
+  
+  <!-- AI can intelligently organize related topics -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Advanced Topics</navtitle>
+    </topicmeta>
+    <topicref href="ai-dita-management.dita" linking="normal">
+      <topicmeta>
+        <navtitle>AI-Driven DITA Management</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="my-custom-topic.dita" linking="normal"/>
+    <topicref keyref="plugin-development" collection-type="sequence">
+      <topicref keyref="plugin-basics"/>
+      <topicref keyref="plugin-advanced"/>
+    </topicref>
+    <topicref keyref="customization-topics" collection-type="family">
+      <topicref keyref="css-customization"/>
+      <topicref keyref="pdf-customization"/>
+    </topicref>
+  </topicgroup>
 
 </map>

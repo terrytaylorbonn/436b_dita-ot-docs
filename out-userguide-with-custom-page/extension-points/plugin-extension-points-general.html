@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="These extension points enable you to extend DITA-OT. You can add Ant targets or imports; add a Java library to the classpath parameter; add a new transformation type; extend a catalog file; add new diagnostic messages, and more."><title>General extension points</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="plugin-general-extension-points"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">General extension points</h1>
+  
+  
+  <div class="body refbody"><p class="shortdesc">These extension points enable you to extend DITA-OT. You can add Ant targets or imports; add a Java library
+    to the <span class="keyword parmname">classpath</span> parameter; add a new transformation type; extend a catalog file; add new
+    diagnostic messages, and more.</p>
+    <section class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm" id="plugin-general-extension-points__ant.import"><span class="keyword parmname">ant.import</span></dt>
+          <dd class="dd">Adds an Ant import to the main Ant build file.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.conductor.lib.import</span></dt>
+          <dd class="dd">Adds a Java
+            library to the DITA-OT classpath.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.conductor.target</span></dt>
+          <dd class="dd">Adds an Ant
+            import to the main Ant build file.
+            <div class="p">
+              <div class="note attention note_attention"><span class="note__title">Attention:</span> <div class="note__body">This extension point is deprecated; use <code class="ph codeph">ant.import</code> instead.</div></div>
+            </div>
+          </dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.conductor.target.relative</span></dt>
+          <dd class="dd">Adds
+            an Ant import to the main Ant build file.
+            <div class="p">
+              <div class="note tip note_tip"><span class="note__title">Tip:</span> <div class="note__body">As of DITA-OT 3.0, the <code class="ph codeph">ant.import</code> extension point can be used
+                instead.</div></div>
+            </div>
+          </dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.conductor.transtype.check</span></dt>
+          <dd class="dd">
+            <p class="p">Adds a new value to the list of valid transformation types.</p>
+            <div class="note tip note_tip"><span class="note__title">Tip:</span> <div class="note__body">This extension point is still supported for backwards compatibility, but since DITA-OT 2.1,
+              any new customizations should instead use the <code class="keyword markupname xmlelement">&lt;transtype&gt;</code> element in the
+              <a class="xref" href="../topics/plugin-configfile.html" title="The plug-in descriptor file (plugin.xml) controls all aspects of a plug-in, making each extension visible to the rest of the toolkit. The file uses pre-defined extension points to locate changes, and then integrates those changes into the core DITA-OT code.">Plug-in descriptor file</a> to define a new transformation.</div></div>
+          </dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.specialization.catalog</span></dt>
+          <dd class="dd">Adds the
+            content of a catalog file to the main DITA-OT catalog file. <div class="note attention note_attention"><span class="note__title">Attention:</span> <div class="note__body">This extension point is
+              deprecated; use <code class="ph codeph">dita.specialization.catalog.relative</code> instead.</div></div></dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.specialization.catalog.relative</span></dt>
+          <dd class="dd">Adds the content of a catalog file to the main DITA-OT catalog file.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.transtype.print</span></dt>
+          <dd class="dd">Defines a
+            transformation as a print type. </dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">dita.xsl.messages</span></dt>
+          <dd class="dd">Adds new diagnostic
+            messages to DITA-OT.</dd>
+        
+        
+          <dt class="dt dlterm"><span class="keyword parmname">org.dita.pdf2.catalog.relative</span></dt>
+          <dd class="dd">Adds
+            the content of a catalog file to the main catalog file for the PDF plug-in.</dd>
+        
+      </dl>
+    </section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-extension-points.html" title="DITA Open Toolkit provides a series of extension points that can be used to integrate changes into the core code. Extension points are defined in the plugin.xml file for each plug-in. When plug-ins are installed, DITA-OT makes each extension visible to the rest of the toolkit.">Extension point reference</a></div></div></nav></article></main></body></html>

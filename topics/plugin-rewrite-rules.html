@@ -1,0 +1,44 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="To dynamically adjust the names and locations of output files in the map-first pre-processing routine (preprocess2), you can create a custom plug-in and specify the code that contains your custom rewrite rules."><title>Adjusting file names in map-first pre-processing</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="ID"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Adjusting file names in map-first pre-processing</h1>
+  
+  
+  
+  <div class="body conbody"><p class="shortdesc">To dynamically adjust the names and locations of output files in the map-first pre-processing routine
+      (<code class="ph codeph">preprocess2</code>), you can create a custom plug-in and specify the code that contains your custom
+    rewrite rules.</p>
+    <p class="p">For example, set the <span class="keyword parmname">result.rewrite-rule.xsl</span> parameter to specify a bundled XSLT stylesheet
+      that contains your custom rewrite rules.</p>
+    <div class="p">
+      <pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;project name="com.example.rewrite.pdf"&gt;
+  &lt;target name="dita2rewrite.pdf.init"&gt;
+    &lt;property name="customization.dir"
+              location="${dita.plugin.com.example.rewrite.pdf.dir}/cfg"/&gt;
+    <strong class="ph b">&lt;property name="result.rewrite-rule.xsl" 
+              value="${dita.plugin.com.example.rewrite.pdf.dir}/custom-rules.xsl"/&gt;</strong>
+  &lt;/target&gt;
+  &lt;target name="dita2rewrite.pdf"
+          depends="dita2rewrite.pdf.init, dita2production.pdf, dita2pdf2"/&gt;
+&lt;/project&gt;</code></pre>
+    </div>
+    <p class="p">Your plug-in would also include a <span class="ph filepath">custom-rules.xsl</span> file, which might contain templates like
+      this to move all image files to an <span class="ph filepath">images</span> subdirectory:</p>
+    <div class="p">
+      <pre class="pre codeblock language-xml normalize-space show-line-numbers show-whitespace"><code>&lt;xsl:template match="node() | @*"&gt;
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="node() | @*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match="file[@format = 'image']/@result"&gt;
+  &lt;xsl:attribute name="{local-name()}" select="concat('images/', .)"/&gt;
+&lt;/xsl:template&gt;</code></pre>
+    </div>
+    <div class="note note note_note"><span class="note__title">Note:</span> <div class="note__body">If your rewrite rules are contained in a Java class, you can set the
+        <span class="keyword parmname">result.rewrite-rule.class</span> parameter instead, and pass the name of your Java class in the
+      <code class="keyword markupname xmlatt">@value attribute.</code> The custom class should implement the
+      <code class="ph codeph">org.dita.dost.module.RewriteRule</code> interface.</div></div>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="plugin-use-cases.html" title="Plug-ins allow you to extend the functionality of DITA-OT. This might entail adding support for specialized document types, integrating processing overrides, or defining new output transformations.">Plug-in use cases</a></div></div></nav></article></main></body></html>

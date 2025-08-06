@@ -1,0 +1,65 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="DITA-OT includes sample project files in YAML format that can be used to define a publication project. Like the XML project samples, the sample YAML files illustrate how deliverables can be described for use in publication projects. The YAML samples are functionally equivalent to their XML and JSON counterparts, with minor adaptations to YAML file syntax."><title>Sample YAML project files</title><link rel="stylesheet" type="text/css" href="../css/dita-ot-doc.css"></head><body id="ID"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Sample YAML project files</h1>
+  
+  
+  
+  <div class="body conbody"><p class="shortdesc">DITA-OT includes sample project files in
+    <a class="xref" href="https://yaml.org" target="_blank" rel="external noopener">YAML</a> format that can be used to define a publication project. Like the XML project samples, the
+    sample YAML files illustrate how deliverables can be described for use in publication projects. The YAML samples are
+    functionally equivalent to their XML and JSON counterparts, with minor adaptations to YAML file syntax.</p>
+    <p class="p">Project files can be designed in a modular fashion to create reusable configuration structures that allow you to
+      define settings in one file and refer to them in other projects to publish multiple deliverables at once.</p>
+    <p class="p">For example, <span class="ph filepath"><var class="keyword varname">dita-ot-dir</var>/docsrc/samples</span><span class="ph filepath">/project-files/html.yaml</span> defines
+      a single HTML deliverable.</p>
+    <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Sample project file for HTML output</figcaption>
+      
+      <pre class="pre codeblock language-yaml normalize-space show-line-numbers show-whitespace"><code>---
+includes:
+  - 'common.yaml'
+deliverables:
+  - name: 'HTML5'
+    context:
+      idref: 'html'
+    output: '.'
+    publication:
+      transtype: 'html5'
+      params:
+        - name: 'args.copycss'
+          value: 'yes'
+        - name: 'args.css'
+          value: 'dita-ot-doc.css'
+        - name: 'args.csspath'
+          value: 'css'
+        - name: 'args.cssroot'
+          path: '../../resources'
+        - name: 'args.gen.task.lbl'
+          value: 'YES'
+        - name: 'args.hdr'
+          href: '../../resources/header.xml'
+        - name: 'args.rellinks'
+          value: 'noparent'
+        - name: 'html5.toc.generate'
+          value: 'no'
+        - name: 'nav-toc'
+          value: 'partial'</code></pre>
+    </figure>
+    <p class="p">This file can be used to generate the HTML version of the DITA-OT documentation by running the following command
+      from the <span class="ph filepath">docsrc</span> folder of the DITA-OT installation directory:</p>
+    <pre class="pre codeblock"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--project</span>=<var class="keyword varname">samples/project-files/html.yaml</var></code></pre>
+    <p class="p">The project file for HTML output imports the common <code class="ph codeph">html</code> context from a shared project context
+      defined in the <span class="ph filepath"><var class="keyword varname">dita-ot-dir</var>/docsrc/samples</span><span class="ph filepath">/project-files/common.yaml</span>
+      file, which includes the input map file and the DITAVAL file used to filter the output.</p>
+    <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>Sample shared context for HTML-based output</figcaption>
+      
+      <pre class="pre codeblock language-yaml normalize-space show-line-numbers show-whitespace"><code>---
+contexts:
+  - id: 'html'
+    input: '../../userguide.ditamap'
+    profiles:
+      ditavals:
+        - '../../resources/html.ditaval'</code></pre>
+    </figure>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="using-project-files.html" title="DITA-OT project files allow you to publish multiple deliverables at once. Each deliverable specifies a re-usable source context that groups the maps or topics you want to publish, an output folder, and a publication format (such as HTML, or PDF) with transformation parameters.">Publishing with project files</a></div></div></nav></article></main></body></html>
