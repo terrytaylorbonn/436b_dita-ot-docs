@@ -8,7 +8,6 @@ services:
       # Download and install DITA-OT
       wget https://github.com/dita-ot/dita-ot/releases/download/4.1/dita-ot-4.1.zip
       unzip dita-ot-4.1.zip
-      export PATH=$PATH:$(pwd)/dita-ot-4.1/bin
-      # Build the docs
-      dita --input=a12-3/a12-3.ditamap --format=xhtml --output=public
+  # Build the docs using full path to dita
+  ./dita-ot-4.1/bin/dita --input=a12-3/a12-3.ditamap --format=xhtml --output=public
     staticPublishPath: public
