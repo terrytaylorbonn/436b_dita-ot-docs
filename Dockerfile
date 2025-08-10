@@ -2,7 +2,7 @@
 FROM openjdk:17-slim
 
 # Install wget and unzip
-RUN apt-get update && apt-get install -y wget unzip && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y wget unzip python3 && rm -rf /var/lib/apt/lists/*
 
 # Download and install DITA-OT
 WORKDIR /opt
