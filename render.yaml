@@ -1,0 +1,14 @@
+services:
+  - type: static
+    name: dita-ot-docs
+    env: docker
+    buildCommand: |
+      # Install Java
+      apt-get update && apt-get install -y openjdk-11-jre-headless wget unzip
+      # Download and install DITA-OT
+      wget https://github.com/dita-ot/dita-ot/releases/download/4.1/dita-ot-4.1.zip
+      unzip dita-ot-4.1.zip
+      export PATH=$PATH:$(pwd)/dita-ot-4.1/bin
+      # Build the docs
+      dita --input=a12-3/a12-3.ditamap --format=xhtml --output=public
+    staticPublishPath: public
