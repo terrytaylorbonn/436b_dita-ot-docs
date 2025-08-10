@@ -15,9 +15,5 @@ WORKDIR /app
 COPY . /app
 
 # Build docs on container build
-RUN /opt/dita-ot-4.1/bin/dita --input=a12-3/a12-3.ditamap --format=xhtml --output=public
-
-# Serve static files from /app/public
-# Use a simple static file server (e.g., Python's http.server)
 EXPOSE 8080
-CMD ["python3", "-m", "http.server", "8080", "--directory", "/app/public"]
+CMD /opt/dita-ot-4.1/bin/dita --input=a12-3/a12-3.ditamap --format=xhtml --output=public && python3 -m http.server 8080 --directory /app/public
