@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Automated Data Ingestion Pipeline (Chapters)</title>
+  <topicref href="overview.dita">
+    <topicmeta>
+      <navtitle>Overview</navtitle>
+    </topicmeta>
+  </topicref>
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Chapters</navtitle>
+      <shortdesc>Links to chapters:</shortdesc>
+    </topicmeta>
+    <topicref href="chapter1-source-integration.dita">
+      <topicmeta>
+        <navtitle>Chapter 1: Source Integration</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter2-data-transformation.dita">
+      <topicmeta>
+        <navtitle>Chapter 2: Data Transformation</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter3-storage-management.dita">
+      <topicmeta>
+        <navtitle>Chapter 3: Storage and Management</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter4-monitoring-optimization.dita">
+      <topicmeta>
+        <navtitle>Chapter 4: Monitoring and Optimization</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
+  <!-- <topicgroup>
+    <topicmeta>
+      <navtitle>Appendix</navtitle>
+    </topicmeta>
+        <topicref href="chapter2-data-transformation.dita" keys="appendix-data-transformation">
+          <topicmeta>
+            <navtitle>Appendix: Data Transformation</navtitle>
+          </topicmeta>
+        </topicref>
+  </topicgroup> -->
+  <reltable>
+    <relheader>
+      <relcolspec type="concept"/>
+      <relcolspec type="concept"/>
+      <relcolspec type="concept"/>
+    </relheader>
+    <relrow>
+      <relcell>
+        <topicref href="chapter1-source-integration.dita"/>
+      </relcell>
+      <relcell>
+          <topicref keyref="appendix-data-transformation"/>
+      </relcell>
+      <relcell>
+        <topicref href="chapter3-storage-management.dita"/>
+      </relcell>
+    </relrow>
+  </reltable>
+  <keydef keys="product-name">
+    <topicmeta>
+      <linktext>SuperData Pipeline</linktext>
+    </topicmeta>
+  </keydef>
+  <topicref href="faq.dita">
+    <topicmeta>
+      <navtitle>FAQ</navtitle>
+    </topicmeta>
+  </topicref>
+</map>

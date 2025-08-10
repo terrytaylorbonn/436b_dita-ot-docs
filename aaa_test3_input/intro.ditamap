@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!--  This file is part of the DITA Open Toolkit project. See the accompanying LICENSE file for applicable license.  -->
+<map>
+  <title>### intro.ditamap title ###</title>
+
+  <!-- Key definitions for content reuse -->
+  <keydef keys="key111">
+    <topicmeta>
+      <linktext>### intro.ditamap key111 linktext ###</linktext>
+    </topicmeta>
+  </keydef>
+  
+  <keydef keys="key222">
+    <topicmeta>
+      <linktext>### intro.ditamap key222 linktext ###</linktext>
+    </topicmeta>
+  </keydef>
+  
+  <keydef keys="key333">
+    <topicmeta>
+      <linktext>### intro.ditamap key333 linktext ###</linktext>
+    </topicmeta>
+  </keydef>
+
+  <!-- DITA Feature Demonstrations -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>### intro.ditamap 111.data topicmeta navtitle ###</navtitle>
+    </topicmeta>
+    <topicref href="111.dita" linking="normal">
+      <topicmeta>
+        <navtitle>### intro.ditamap 111.data topicref topicmeta navtitle ###</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
+  
+  <!-- AI can intelligently organize related topics -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>### intro.ditamap 222.data topicmeta navtitle ###</navtitle>
+    </topicmeta>
+    <topicref href="222.dita" linking="normal">
+      <topicmeta>
+        <navtitle>### intro.ditamap 222.data topicref topicmeta navtitle ###</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
+
+  <!-- Third topic for relationship demo -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>### Installation Tasks ###</navtitle>
+    </topicmeta>
+    <topicref href="333.dita" linking="normal">
+      <topicmeta>
+        <navtitle>### Installation Guide ###</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
+
+  <!-- RELATIONSHIP TABLE: Creates automatic cross-references -->
+  <reltable>
+    <relheader>
+      <relcolspec type="concept"/>
+      <relcolspec type="reference"/>
+      <relcolspec type="task"/>
+    </relheader>
+    <relrow>
+      <!-- Row 1: Overview connects to troubleshooting and installation -->
+      <relcell>
+        <topicref href="111.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="222.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="333.dita"/>
+      </relcell>
+    </relrow>
+  </reltable>
+
+</map>

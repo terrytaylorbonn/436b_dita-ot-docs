@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="chapter2-data-transformation">
+  <title>Chapter 2: Data Transformation</title>
+  <shortdesc>Transformation routines are applied to cleanse, enrich, and standardize the information.</shortdesc>
+  <conbody>
+    <p>Common operations include removing duplicates, correcting errors, and mapping fields to a unified schema. Advanced transformations may involve joining datasets, deriving new metrics, or applying machine learning models for predictive analytics. The transformation engine is built for scalability, allowing parallel processing of large datasets. Configuration files and reusable scripts enable rapid adaptation to changing business requirements. Quality assurance checks are embedded throughout the process to maintain data integrity and support regulatory compliance.</p>
+  </conbody>
+</concept>

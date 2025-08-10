@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+  <!-- Include all audiences -->
+  <prop att="audience" val="beginner" action="include"/>
+  <prop att="audience" val="expert" action="include"/>
+  <!-- Include only Windows content -->
+  <prop att="platform" val="windows" action="include"/>
+  <prop att="platform" val="linux" action="exclude"/>
+</val>

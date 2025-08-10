@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="keys-demo">
+  <title>DITA Keys Demo: Content Reuse Made Simple</title>
+  <shortdesc>See how <ph keyref="product-name"/> uses keys for consistent content reuse.</shortdesc>
+  
+  <conbody>
+    <section>
+      <title>What Are Keys?</title>
+      <p>Keys in DITA allow you to define content once and reuse it everywhere. Instead of typing 
+      "<ph keyref="product-name"/>" hundreds of times, you reference a key.</p>
+    </section>
+    
+    <section>
+      <title>Simple Example</title>
+      <p>This topic demonstrates <ph keyref="product-name"/> version <ph keyref="version"/> 
+      from the <ph keyref="company"/>.</p>
+      
+      <p><b>Key Benefits:</b></p>
+      <ul>
+        <li>Change the product name once, update everywhere automatically</li>
+        <li>Maintain consistency across hundreds of pages</li>
+        <li>Support multiple product versions from the same source</li>
+      </ul>
+    </section>
+    
+    <section>
+      <title>AI Advantage</title>
+      <p>AI can automatically:</p>
+      <ul>
+        <li>Detect inconsistent product names and suggest key usage</li>
+        <li>Update key definitions based on context</li>
+        <li>Validate key references across the entire document set</li>
+      </ul>
+    </section>
+    
+    <example>
+      <title>Before and After Keys</title>
+      <p><b>Before (manual repetition):</b></p>
+      <codeblock>Welcome to DITA-OT AI Assistant!
+DITA-OT AI Assistant helps you...
+To install DITA-OT AI Assistant...</codeblock>
+      
+      <p><b>After (with keys):</b></p>
+      <codeblock>Welcome to &lt;ph keyref="product-name"/&gt;!
+&lt;ph keyref="product-name"/&gt; helps you...
+To install &lt;ph keyref="product-name"/&gt;...</codeblock>
+      
+      <p><b>Result:</b> Change one key definition, update all references instantly!</p>
+    </example>
+  </conbody>
+</concept>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ai-dita-management">
+  <title>### 222.dita title ###</title>
+  <shortdesc>short descr.</shortdesc>
+  
+  <conbody>
+    <section>
+      <title>section1 title</title>
+      <p>ppppppppppppppppppppppppppp</p>
+      <ul>
+        <li>uliiiiiiiiiiiiiiiii</li>
+        <li>uliiiiiiiiiiiiiiiii</li>
+      </ul>
+    </section>
+    
+    <section>
+      <title>section2 title</title>
+      <p>ppppppppppppppppppppppppp</p>
+      <ol>
+        <li>ollllllllllllllllllllll</li>
+        <li>ollllllllllllllllllllll</li>
+        <li>ollllllllllllllllllllll</li>
+      </ol>
+    </section>
+    
+  </conbody>
+  
+  <related-links>
+    <link href="111.dita">
+      <linktext>### 222.dita linktext to 111.dita ###</linktext>
+    </link>
+  </related-links>
+</concept>

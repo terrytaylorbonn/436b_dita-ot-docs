@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Automated Data Ingestion Pipeline (Chapters)</title>
+  <topicref href="overview.dita">
+    <topicmeta>
+      <navtitle>Overview</navtitle>
+    </topicmeta>
+  </topicref>
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Chapters</navtitle>
+      <shortdesc>Links to chapters:</shortdesc>
+    </topicmeta>
+    <topicref href="chapter1-source-integration.dita">
+      <topicmeta>
+        <navtitle>Chapter 1: Source Integration</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter2-data-transformation.dita">
+      <topicmeta>
+        <navtitle>Chapter 2: Data Transformation</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter3-storage-management.dita">
+      <topicmeta>
+        <navtitle>Chapter 3: Storage and Management</navtitle>
+      </topicmeta>
+    </topicref>
+    <topicref href="chapter4-monitoring-optimization.dita">
+      <topicmeta>
+        <navtitle>Chapter 4: Monitoring and Optimization</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
+</map>

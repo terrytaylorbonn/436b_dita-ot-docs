@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="troubleshooting-reference">
+  <title>### Troubleshooting Reference ###</title>
+  <shortdesc>Common problems and solutions.</shortdesc>
+  
+  <refbody>
+    <section>
+      <title>Common Issues</title>
+      <p>If you encounter problems, check this troubleshooting guide.</p>
+    </section>
+    
+    <section>
+      <title>Error Messages</title>
+      <simpletable>
+        <sthead>
+          <stentry>Error</stentry>
+          <stentry>Solution</stentry>
+        </sthead>
+        <strow>
+          <stentry>Installation failed</stentry>
+          <stentry>Check permissions and disk space</stentry>
+        </strow>
+        <strow>
+          <stentry>Login issues</stentry>
+          <stentry>Reset password or contact admin</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

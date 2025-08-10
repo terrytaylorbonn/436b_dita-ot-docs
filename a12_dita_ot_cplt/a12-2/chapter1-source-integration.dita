@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="chapter1-source-integration">
+  <title>Chapter 1: Source Integration</title>
+  <shortdesc>Integrating diverse data sources is a critical step in building an effective pipeline.</shortdesc>
+  <conbody>
+    <p>The process begins with identifying all relevant sources, such as databases, APIs, flat files, and streaming platforms. Each source may require custom connectors or adapters to extract data efficiently. Security and compliance considerations are addressed by implementing authentication, encryption, and access controls. The integration layer normalizes incoming data formats, ensuring consistency for downstream processing. Automated scheduling and event-driven triggers enable timely data collection, while logging mechanisms provide traceability and auditability for all source interactions.</p>
+  </conbody>
+</concept>

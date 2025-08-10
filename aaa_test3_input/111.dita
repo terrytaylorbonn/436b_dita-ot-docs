@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="product-overview">
+  <title>### Product Overview (Concept) ###</title>
+  <shortdesc>Overview of our software product and its features.</shortdesc>
+  
+  <conbody>
+    <section>
+      <title>What is this product?</title>
+      <p>This is a comprehensive software solution that helps you manage your workflow.</p>
+      <p>Key features include automation, reporting, and user management.</p>
+    </section>
+    
+    <section>
+      <title>Who should use it?</title>
+      <p>Perfect for teams that need to streamline their processes and improve efficiency.</p>
+    </section>
+  </conbody>
+</concept>

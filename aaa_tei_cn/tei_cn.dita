@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tei-cn-demo">
+  <title>可扩展标记语言</title>
+  <shortdesc>TEI P5 中文演示文档，内容介绍 XML 的历史、用途和术语。</shortdesc>
+  <conbody>
+    <section>
+      <title>摘要</title>
+      <p>可扩展标记语言（英语：Extensible Markup Language，简称：XML），是一种标记语言。标记指计算机所能理解的信息符号，通过此种标记，计算机之间可以处理包含各种信息的文章等。如何定义这些标记，既可以选择国际通用的标记语言，比如HTML，也可以使用像XML这样由相关人士自由决定的标记语言，这就是语言的可扩展性。XML是从标准通用标记语言（SGML）中简化修改出来的。它主要用到的有可扩展标记语言、可扩展样式语言（XSL）、XBRL和XPath等。</p>
+    </section>
+    <section>
+      <title>歷史</title>
+      <p>XML是從1995年開始有其雛形，並向W3C（全球資訊網聯盟）提案，而在1998年二月發佈為W3C的標準（XML1.0）。XML的前身是SGML（The Standard Generalized Markup Language），是自IBM從1960年代就開始發展的GML（Generalized Markup Language）標準化後的名稱。</p>
+      <p>GML的重要概念：</p>
+      <ul>
+        <li>文件中能夠明確的將標示與內容分開</li>
+        <li>所有文件的標示使用方法均一致</li>
+      </ul>
+      <p>1978年，ANSI將GML加以整理規範，發佈成為SGML，1986年起為ISO所採用（ISO 8879），並且被廣泛地運用在各種大型的文件計劃中，但是SGML是一種非常嚴謹的文件描述法，導致過於龐大複雜（標準手冊就有500多頁），難以理解和學習，進而影響其推廣與應用。</p>
+      <p>同時W3C也發現到HTML的問題：</p>
+      <ul>
+        <li>不能解決所有解釋資料的問題 - 像是影音檔或化學公式、音樂符號等其他形態的內容。</li>
+        <li>效能問題 - 需要下載整份文件，才能開始對文件做搜尋。</li>
+        <li>擴充性、彈性、易讀性均不佳。</li>
+      </ul>
+      <p>為了解決以上問題，專家們使用SGML精簡製作，並依照HTML的發展經驗，產生出一套使用上規則嚴謹，但是簡單的描述資料語言：XML。</p>
+      <p>XML是在一個這樣的背景下誕生的——为了有一個更中立的方式，讓消費端自行決定要如何消化、呈現從服務端所提供的資訊。</p>
+      <p>XML被廣泛用來作為跨平台之間交互數據的形式，主要針對數據的內容，通過不同的格式化描述手段（XSLT，CSS等）可以完成最終的形式表達（生成對應的HTML，PDF或者其他的文件格式）。</p>
+    </section>
+    <section>
+      <title>用途</title>
+      <p>XML设计用来传送及携带数据信息，不用来表现或展示数据，HTML則用来表现数据，所以XML用途的焦点是它说明数据是什么，以及携带数据信息。</p>
+      <ul>
+        <li>丰富文件（Rich Documents）- 自定文件描述并使其更丰富</li>
+        <li>属于文件为主的XML技术应用</li>
+        <li>标记是用来定义一份资料应该如何呈现</li>
+        <li>元数据（Metadata）- 描述其它文件或网络资讯</li>
+        <li>属于资料为主的XML技术应用</li>
+        <li>标记是用来说明一份资料的意义</li>
+        <li>配置文档（Configuration Files）- 描述软件設定的参数</li>
+      </ul>
+    </section>
+    <section>
+      <title>重要术语</title>
+      <p>字符（characters）</p>
+      <p>XML 1.0规范允许的（转义后的最终解码值）合法字符： #x9（水平制表符）、#xA（回车符）、#xD（换行符）、#x20-#xD7FF、#xE000-#xFFFD、#x10000-#x10FFFF。即任何Unicode字符，不包含surrogate blocks, FFFE, FFFF。</p>
+      <p>XML规范定义了5个"预定义实体"来表示特殊字符. XML也允许在每个文档定义任意数量的其它命名实体.</p>
+      <p>下表列出了5个XML预定义实体. 通过名字引用这些实体的格式为&amp;name;，例如, &amp; 将绘制为&amp;.</p>
+      <simpletable>
+        <sthead>
+          <stentry>名字</stentry>
+          <stentry>字符</stentry>
+          <stentry>Unicode码位(十进制)</stentry>
+          <stentry>标准</stentry>
+          <stentry>描述</stentry>
+        </sthead>
+        <strow>
+          <stentry>quot</stentry>
+          <stentry>"</stentry>
+          <stentry>U+0022 (34)</stentry>
+          <stentry>XML 1.0</stentry>
+          <stentry>双引号</stentry>
+        </strow>
+        <strow>
+          <stentry>amp</stentry>
+          <stentry>&amp;</stentry>
+          <stentry>U+0026 (38)</stentry>
+          <stentry>XML 1.0</stentry>
+          <stentry>&amp;</stentry>
+        </strow>
+        <strow>
+          <stentry>apos</stentry>
+          <stentry>'</stentry>
+          <stentry>U+0027 (39)</stentry>
+          <stentry>XML 1.0</stentry>
+          <stentry>撇号</stentry>
+        </strow>
+        <strow>
+          <stentry>lt</stentry>
+          <stentry>&lt;</stentry>
+          <stentry>U+003C (60)</stentry>
+          <stentry>XML 1.0</stentry>
+          <stentry>小于号</stentry>
+        </strow>
+        <strow>
+          <stentry>gt</stentry>
+          <stentry>&gt;</stentry>
+          <stentry>U+003E (62)</stentry>
+          <stentry>XML 1.0</stentry>
+          <stentry>大于号</stentry>
+        </strow>
+      </simpletable>
+    </section>
+    <section>
+      <title>与应用（application）</title>
+      <p>XML处理器（Processor，也称作XML parser）分析标记语言并传递结构化信息给应用（application）。</p>
+    </section>
+    <section>
+      <title>标记（Markup）与内容（content）</title>
+      <p>XML文档的字符分为标记（Markup）与内容（content）两类。标记通常以&lt;开头，以&gt;结尾；或者以字符&amp; 开头，以;结尾。不是标记的字符就是内容。但是CDATA部分，分解符号&lt;![CDATA[与]]&gt;是标记，二者之间的文本为内容。 最外界的空白符是标记。</p>
+    </section>
+    <section>
+      <title>Tag</title>
+      <p>一个tag属于标记结构，以&lt;开头，以&gt;结尾。Tag名字是大小写敏感，不能包含任何字符 !&quot;#$%&apos;()*+,/;&lt;=&gt;?@[\]^`{|}~， 也不能有空格符， 不能以&quot;-"或&quot;."或数字开始。可分为三类：</p>
+      <ul>
+        <li>start-tag，如&lt;section&gt;;</li>
+        <li>end-tag，如&lt;/section&gt;;</li>
+        <li>empty-element tag，如&lt;line-break /&gt;.</li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

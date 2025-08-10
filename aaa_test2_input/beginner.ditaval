@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+  <!-- Include content for beginners -->
+  <prop att="audience" val="beginner" action="include"/>
+  <!-- Exclude expert content -->
+  <prop att="audience" val="expert" action="exclude"/>
+  <!-- Include all platforms -->
+  <prop att="platform" val="windows" action="include"/>
+  <prop att="platform" val="linux" action="include"/>
+</val>

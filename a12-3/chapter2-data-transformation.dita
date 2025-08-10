@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="chapter2-data-transformation">
+  <title>Chapter 2: Data Transformation</title>
+  <shortdesc>Transformation routines are applied to cleanse, enrich, and standardize the information.</shortdesc>
+  <conbody>
+  <p><indexterm>Data Transformation</indexterm></p>
+  <p><indexterm>Joining Datasets</indexterm></p>
+  <p><indexterm>Deriving Metrics</indexterm></p>
+  <p><indexterm>Machine Learning Models</indexterm></p>
+  <p><indexterm>Data Enrichment</indexterm></p>
+    <p>Common operations include removing duplicates, correcting errors, and mapping fields to a unified schema.</p>
+    <p>Advanced transformations may involve joining datasets, deriving new metrics, or applying machine learning models for predictive analytics.</p>
+    <simpletable>
+      <sthead>
+        <stentry>Process Name</stentry>
+        <stentry>Description &amp; Examples</stentry>
+      </sthead>
+      <strow>
+        <stentry>Joining Datasets</stentry>
+        <stentry>Combining multiple data sources into a unified view. Example: Merging customer records from CRM and support databases.</stentry>
+      </strow>
+      <strow>
+        <stentry>Deriving Metrics</stentry>
+        <stentry>Calculating new values from existing data. Example: Generating monthly sales growth rates or customer lifetime value.</stentry>
+      </strow>
+      <strow>
+        <stentry>Machine Learning Models</stentry>
+        <stentry>Applying predictive analytics to forecast trends or classify data. Example: Using regression to predict sales or clustering to segment users.</stentry>
+      </strow>
+      <strow>
+        <stentry>Data Enrichment</stentry>
+        <stentry>Adding external information to enhance records. Example: Appending geolocation data to user profiles.</stentry>
+      </strow>
+    </simpletable>
+    <p>The transformation engine is built for scalability, allowing parallel processing of large datasets. Configuration files and reusable scripts enable rapid adaptation to changing business requirements. Quality assurance checks are embedded throughout the process to maintain data integrity and support regulatory compliance.</p>
+    <p><xref href="chapter1-source-integration.dita">Previous: Chapter 1 - Source Integration</xref> | <xref href="chapter3-storage-management.dita">Next: Chapter 3 - Storage and Management</xref></p>
+    <p>For more details, see the <xref keyref="appendix-data-transformation">Appendix: Data Transformation</xref>.</p>
+    </conbody>
+</concept>

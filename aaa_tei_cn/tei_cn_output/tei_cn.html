@@ -1,0 +1,105 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="TEI P5 中文演示文档，内容介绍 XML 的历史、用途和术语。"><title>可扩展标记语言</title><link rel="stylesheet" type="text/css" href="commonltr.css"></head><body id="tei-cn-demo"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">可扩展标记语言</h1>
+  
+  <div class="body conbody"><p class="shortdesc">TEI P5 中文演示文档，内容介绍 XML 的历史、用途和术语。</p>
+    <section class="section"><h2 class="title sectiontitle">摘要</h2>
+      
+      <p class="p">可扩展标记语言（英语：Extensible Markup Language，简称：XML），是一种标记语言。标记指计算机所能理解的信息符号，通过此种标记，计算机之间可以处理包含各种信息的文章等。如何定义这些标记，既可以选择国际通用的标记语言，比如HTML，也可以使用像XML这样由相关人士自由决定的标记语言，这就是语言的可扩展性。XML是从标准通用标记语言（SGML）中简化修改出来的。它主要用到的有可扩展标记语言、可扩展样式语言（XSL）、XBRL和XPath等。</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">歷史</h2>
+      
+      <p class="p">XML是從1995年開始有其雛形，並向W3C（全球資訊網聯盟）提案，而在1998年二月發佈為W3C的標準（XML1.0）。XML的前身是SGML（The Standard Generalized Markup Language），是自IBM從1960年代就開始發展的GML（Generalized Markup Language）標準化後的名稱。</p>
+      <p class="p">GML的重要概念：</p>
+      <ul class="ul">
+        <li class="li">文件中能夠明確的將標示與內容分開</li>
+        <li class="li">所有文件的標示使用方法均一致</li>
+      </ul>
+      <p class="p">1978年，ANSI將GML加以整理規範，發佈成為SGML，1986年起為ISO所採用（ISO 8879），並且被廣泛地運用在各種大型的文件計劃中，但是SGML是一種非常嚴謹的文件描述法，導致過於龐大複雜（標準手冊就有500多頁），難以理解和學習，進而影響其推廣與應用。</p>
+      <p class="p">同時W3C也發現到HTML的問題：</p>
+      <ul class="ul">
+        <li class="li">不能解決所有解釋資料的問題 - 像是影音檔或化學公式、音樂符號等其他形態的內容。</li>
+        <li class="li">效能問題 - 需要下載整份文件，才能開始對文件做搜尋。</li>
+        <li class="li">擴充性、彈性、易讀性均不佳。</li>
+      </ul>
+      <p class="p">為了解決以上問題，專家們使用SGML精簡製作，並依照HTML的發展經驗，產生出一套使用上規則嚴謹，但是簡單的描述資料語言：XML。</p>
+      <p class="p">XML是在一個這樣的背景下誕生的——为了有一個更中立的方式，讓消費端自行決定要如何消化、呈現從服務端所提供的資訊。</p>
+      <p class="p">XML被廣泛用來作為跨平台之間交互數據的形式，主要針對數據的內容，通過不同的格式化描述手段（XSLT，CSS等）可以完成最終的形式表達（生成對應的HTML，PDF或者其他的文件格式）。</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">用途</h2>
+      
+      <p class="p">XML设计用来传送及携带数据信息，不用来表现或展示数据，HTML則用来表现数据，所以XML用途的焦点是它说明数据是什么，以及携带数据信息。</p>
+      <ul class="ul">
+        <li class="li">丰富文件（Rich Documents）- 自定文件描述并使其更丰富</li>
+        <li class="li">属于文件为主的XML技术应用</li>
+        <li class="li">标记是用来定义一份资料应该如何呈现</li>
+        <li class="li">元数据（Metadata）- 描述其它文件或网络资讯</li>
+        <li class="li">属于资料为主的XML技术应用</li>
+        <li class="li">标记是用来说明一份资料的意义</li>
+        <li class="li">配置文档（Configuration Files）- 描述软件設定的参数</li>
+      </ul>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">重要术语</h2>
+      
+      <p class="p">字符（characters）</p>
+      <p class="p">XML 1.0规范允许的（转义后的最终解码值）合法字符： #x9（水平制表符）、#xA（回车符）、#xD（换行符）、#x20-#xD7FF、#xE000-#xFFFD、#x10000-#x10FFFF。即任何Unicode字符，不包含surrogate blocks, FFFE, FFFF。</p>
+      <p class="p">XML规范定义了5个"预定义实体"来表示特殊字符. XML也允许在每个文档定义任意数量的其它命名实体.</p>
+      <p class="p">下表列出了5个XML预定义实体. 通过名字引用这些实体的格式为&amp;name;，例如, &amp; 将绘制为&amp;.</p>
+      <table class="simpletable"><colgroup><col style="width:20%"><col style="width:20%"><col style="width:20%"><col style="width:20%"><col style="width:20%"></colgroup><thead><tr class="sthead">
+          <th class="stentry" scope="col" id="tei-cn-demo__stentry__1">名字</th>
+          <th class="stentry" scope="col" id="tei-cn-demo__stentry__2">字符</th>
+          <th class="stentry" scope="col" id="tei-cn-demo__stentry__3">Unicode码位(十进制)</th>
+          <th class="stentry" scope="col" id="tei-cn-demo__stentry__4">标准</th>
+          <th class="stentry" scope="col" id="tei-cn-demo__stentry__5">描述</th>
+        </tr></thead><tbody><tr class="strow">
+          <td class="stentry" headers="tei-cn-demo__stentry__1">quot</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__2">"</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__3">U+0022 (34)</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__4">XML 1.0</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__5">双引号</td>
+        </tr><tr class="strow">
+          <td class="stentry" headers="tei-cn-demo__stentry__1">amp</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__2">&amp;</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__3">U+0026 (38)</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__4">XML 1.0</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__5">&amp;</td>
+        </tr><tr class="strow">
+          <td class="stentry" headers="tei-cn-demo__stentry__1">apos</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__2">'</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__3">U+0027 (39)</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__4">XML 1.0</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__5">撇号</td>
+        </tr><tr class="strow">
+          <td class="stentry" headers="tei-cn-demo__stentry__1">lt</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__2">&lt;</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__3">U+003C (60)</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__4">XML 1.0</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__5">小于号</td>
+        </tr><tr class="strow">
+          <td class="stentry" headers="tei-cn-demo__stentry__1">gt</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__2">&gt;</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__3">U+003E (62)</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__4">XML 1.0</td>
+          <td class="stentry" headers="tei-cn-demo__stentry__5">大于号</td>
+        </tr></tbody></table>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">与应用（application）</h2>
+      
+      <p class="p">XML处理器（Processor，也称作XML parser）分析标记语言并传递结构化信息给应用（application）。</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">标记（Markup）与内容（content）</h2>
+      
+      <p class="p">XML文档的字符分为标记（Markup）与内容（content）两类。标记通常以&lt;开头，以&gt;结尾；或者以字符&amp; 开头，以;结尾。不是标记的字符就是内容。但是CDATA部分，分解符号&lt;![CDATA[与]]&gt;是标记，二者之间的文本为内容。 最外界的空白符是标记。</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Tag</h2>
+      
+      <p class="p">一个tag属于标记结构，以&lt;开头，以&gt;结尾。Tag名字是大小写敏感，不能包含任何字符 !"#$%'()*+,/;&lt;=&gt;?@[\]^`{|}~， 也不能有空格符， 不能以"-"或"."或数字开始。可分为三类：</p>
+      <ul class="ul">
+        <li class="li">start-tag，如&lt;section&gt;;</li>
+        <li class="li">end-tag，如&lt;/section&gt;;</li>
+        <li class="li">empty-element tag，如&lt;line-break /&gt;.</li>
+      </ul>
+    </section>
+  </div>
+</article></main></body></html>

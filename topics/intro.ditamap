@@ -2,7 +2,26 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <!--  This file is part of the DITA Open Toolkit project. See the accompanying LICENSE file for applicable license.  -->
 <map>
-  <title>Intro topics</title>
+  <title>@@@Intro topics111@@@@@@@@@@@@@</title>
+
+  <!-- Key definitions for content reuse -->
+  <keydef keys="product-name">
+    <topicmeta>
+      <linktext>###product-name111############</linktext>
+    </topicmeta>
+  </keydef>
+  
+  <keydef keys="version">
+    <topicmeta>
+      <linktext>###version111#############</linktext>
+    </topicmeta>
+  </keydef>
+  
+  <keydef keys="company">
+    <topicmeta>
+      <linktext>###company-name111########</linktext>
+    </topicmeta>
+  </keydef>
 
   <topicref keyref="release-notes">
     <topicref keyref="release-history" deliveryTarget="html"/>
@@ -14,6 +33,18 @@
     <mapref href="transformations.ditamap"/>
   </topicref>
   <topicref href="my-custom-topic.dita" linking="normal"/>
+  
+  <!-- DITA Feature Demonstrations -->
+  <topicgroup>
+    <topicmeta>
+      <navtitle>DITA Core Features</navtitle>
+    </topicmeta>
+    <topicref href="keys-demo.dita" linking="normal">
+      <topicmeta>
+        <navtitle>1. Content Reuse with Keys</navtitle>
+      </topicmeta>
+    </topicref>
+  </topicgroup>
   
   <!-- AI can intelligently organize related topics -->
   <topicgroup>

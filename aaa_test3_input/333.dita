@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installation-task">
+  <title>### 333.dita Installation Task ###</title>
+  <shortdesc>How to install the software.</shortdesc>
+  
+  <taskbody>
+    <prereq>
+      <p>Before installing, read the overview and troubleshooting guide.</p>
+    </prereq>
+    
+    <steps>
+      <step>
+        <cmd>Download the installer</cmd>
+      </step>
+      <step>
+        <cmd>Run the setup wizard</cmd>
+      </step>
+      <step>
+        <cmd>Verify installation</cmd>
+      </step>
+    </steps>
+    
+    <result>
+      <p>Installation complete! Check the troubleshooting guide if you encounter issues.</p>
+    </result>
+  </taskbody>
+</task>

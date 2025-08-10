@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="overview">
+  <title>Overview</title>
+  <shortdesc>This overview introduces the core concepts and benefits of implementing an automated data ingestion pipeline in today's data-centric environments.</shortdesc>
+  <conbody>
+    <p><indexterm>SuperData Pipeline</indexterm></p>
+    <p>The automated data ingestion pipeline is a modern solution for collecting, processing, and storing large volumes of data from multiple sources. It is designed to handle structured and unstructured data, ensuring that information flows seamlessly from external systems into a centralized repository. The pipeline leverages scalable cloud infrastructure, robust error handling, and real-time monitoring to guarantee reliability and performance. By automating repetitive tasks, organizations can reduce manual intervention, minimize errors, and accelerate data-driven decision-making.</p>
+    <p>This demo uses <ph keyref="product-name"/> for all data integration tasks.</p>
+    <p><xref href="chapter1-source-integration.dita">Next: Chapter 1 - Source Integration</xref></p>
+  </conbody>
+</concept>

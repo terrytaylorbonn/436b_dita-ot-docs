@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index id="index">
+  <title>Index</title>
+  <indexbody>
+    <indexterm>
+      <term>Data Transformation</term>
+      <indexterm>
+        <term>Joining Datasets</term>
+      </indexterm>
+      <indexterm>
+        <term>Deriving Metrics</term>
+      </indexterm>
+      <indexterm>
+        <term>Machine Learning Models</term>
+      </indexterm>
+      <indexterm>
+        <term>Data Enrichment</term>
+      </indexterm>
+    </indexterm>
+    <indexterm>
+      <term>Source Integration</term>
+    </indexterm>
+    <indexterm>
+      <term>Storage and Management</term>
+    </indexterm>
+    <indexterm>
+      <term>Monitoring and Optimization</term>
+    </indexterm>
+    <indexterm>
+      <term>SuperData Pipeline</term>
+    </indexterm>
+  </indexbody>
+</index>

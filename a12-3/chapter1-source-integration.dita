@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="chapter1-source-integration">
+  <title>Chapter 1: Source Integration</title>
+  <shortdesc>Integrating diverse data sources is a critical step in building an effective pipeline.</shortdesc>
+  <conbody>
+  <p><indexterm>Source Integration</indexterm></p>
+    <p>The process begins with identifying all relevant sources, such as databases, APIs, flat files, and streaming platforms. Each source may require custom connectors or adapters to extract data efficiently. Security and compliance considerations are addressed by implementing authentication, encryption, and access controls. The integration layer normalizes incoming data formats, ensuring consistency for downstream processing. Automated scheduling and event-driven triggers enable timely data collection, while logging mechanisms provide traceability and auditability for all source interactions.</p>
+    <image href="diagram_automated_scheduling.png" placement="break" alt="Automated scheduling diagram"/>
+    <p platform="windows">Windows-specific: Use Task Scheduler to automate data collection.</p>
+    <p platform="linux">Linux-specific: Use cron jobs for automated data collection.</p>
+    <p audience="beginner">Beginner tip: Start with default connectors for common sources.</p>
+    <p audience="expert">Expert tip: Customize connectors for advanced integration scenarios.</p>
+    <p conref="reusable-paragraph.dita#reusable-paragraph/shared-paragraph"/>
+    <p><xref href="overview.dita">Previous: Overview</xref> | <xref href="chapter2-data-transformation.dita">Next: Chapter 2 - Data Transformation</xref></p>
+  </conbody>
+</concept>
